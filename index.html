@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun King AI Customer Support</title>
+    <style>
+        :root {
+            --primary: #FFD700;
+            --secondary: #000000;
+            --accent: #FF6B00;
+            --light: #F8F9FA;
+            --dark: #343A40;
+            --success: #28A745;
+            --danger: #DC3545;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .header-text h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .header-text p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .status-badge {
+            background: var(--success);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        textarea, input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        textarea:focus, input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #e6c200;
+            transform: translateY(-2px);
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #222;
+        }
+        
+        .response-container {
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .response-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .response-title {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .response-content {
+            background: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            white-space: pre-wrap;
+            margin-bottom: 15px;
+        }
+        
+        .copy-btn {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        
+        .copy-btn:hover {
+            background: #333;
+        }
+        
+        .feedback-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .feedback-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .feedback-btn.like {
+            background: #e8f5e8;
+            color: var(--success);
+        }
+        
+        .feedback-btn.dislike {
+            background: #fde8e8;
+            color: var(--danger);
+        }
+        
+        .feedback-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: var(--border-radius);
+        }
+        
+        .feature-icon {
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo">SK</div>
+                <div class="header-text">
+                    <h1>Sun King AI Customer Support</h1>
+                    <p>Expert AI-powered assistance for your solar solutions</p>
+                </div>
+            </div>
+            <div class="status-badge">Operational</div>
+        </header>
+        
+        <div class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Customer Inquiry</h2>
+                    <div class="card-icon">💬</div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="customer-inquiry">Enter customer message:</label>
+                    <textarea id="customer-inquiry" placeholder="Paste customer inquiry here..."></textarea>
+                </div>
+                
+                <div class="input-group">
+                    <label for="conversation-id">Conversation ID (optional):</label>
+                    <input type="text" id="conversation-id" placeholder="Leave empty for new conversation">
+                </div>
+                
+                <button id="generate-btn" class="btn btn-block">Generate AI Response</button>
+                
+                <div class="loading" id="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>Generating expert response...</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">AI Responses</h2>
+                    <div class="card-icon">🤖</div>
+                </div>
+                
+                <div class="response-container">
+                    <div class="response-header">
+                        <div class="response-title">Public Reply</div>
+                        <button class="copy-btn" data-target="public-response">Copy</button>
+                    </div>
+                    <div class="response-content" id="public-response">
+                        Your public response will appear here...
+                    </div>
+                    
+                    <div class="response-header">
+                        <div class="response-title">Private Reply</div>
+                        <button class="copy-btn" data-target="private-response">Copy</button>
+                    </div>
+                    <div class="response-content" id="private-response">
+                        Your private response will appear here...
+                    </div>
+                    
+                    <div class="feedback-buttons">
+                        <button class="feedback-btn like">👍 Response Helpful</button>
+                        <button class="feedback-btn dislike">👎 Needs Improvement</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-value">631</div>
+                <div class="stat-label">Scenarios</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">72</div>
+                <div class="stat-label">Products</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">40</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-top: 30px;">
+            <div class="card-header">
+                <h2 class="card-title">System Features</h2>
+                <div class="card-icon">⚡</div>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <span>Multi-language Support (EN/SW)</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔒</div>
+                    <span>Secure & Private</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <span>Fast Response Times</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <span>Performance Analytics</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <span>Continuous Learning</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💾</div>
+                    <span>Conversation Memory</span>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Powered by Sun King AI Technology | Version 7.0-Ultimate | © 2024 Sun King Solar</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generate-btn');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const publicResponse = document.getElementById('public-response');
+            const privateResponse = document.getElementById('private-response');
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            const feedbackButtons = document.querySelectorAll('.feedback-btn');
+            
+            // Generate response button click handler
+            generateBtn.addEventListener('click', function() {
+                const inquiry = document.getElementById('customer-inquiry').value.trim();
+                
+                if (!inquiry) {
+                    alert('Please enter a customer inquiry');
+                    return;
+                }
+                
+                // Show loading indicator
+                loadingIndicator.style.display = 'block';
+                
+                // Simulate API call (replace with actual API call)
+                setTimeout(() => {
+                    // Sample responses based on inquiry content
+                    let samplePublic, samplePrivate;
+                    
+                    if (inquiry.toLowerCase().includes('price') || inquiry.toLowerCase().includes('cost') || inquiry.toLowerCase().includes('bei')) {
+                        samplePublic = "We'd love to help you with pricing information! Please check your DMs for complete details. ^AO";
+                        samplePrivate = "Thank you for your interest in our products! To give you accurate pricing and payment plans, could you please share:\n\n• Your location (county/town)\n• Your phone number\n• Best time to call\n\nOur sales team will contact you within 24 hours with complete pricing breakdown and current promotions in your area. ^AO";
+                    } else if (inquiry.toLowerCase().includes('not working') || inquiry.toLowerCase().includes('problem') || inquiry.toLowerCase().includes('issue')) {
+                        samplePublic = "We're sorry you're experiencing issues. We'll help troubleshoot this - sending steps via DM now. ^AO";
+                        samplePrivate = "We apologize that your device isn't working as expected. We're here to help you fix this.\n\nTo better assist you, could you please tell us:\n1. What exactly is happening?\n2. When did this start?\n3. Have you tried anything already?\n\nOnce we understand the issue, we'll guide you through troubleshooting steps. Most issues can be resolved quickly without a shop visit. ^AO";
+                    } else if (inquiry.toLowerCase().includes('hello') || inquiry.toLowerCase().includes('hi') || inquiry.toLowerCase().includes('habari')) {
+                        samplePublic = "Hello! How can we help you today? ^AO";
+                        samplePrivate = "Welcome to Sun King Solar support! We're here to assist you with any questions about our products, payments, or technical issues. What can we help you with today? ^AO";
+                    } else {
+                        samplePublic = "We can help you with that! Sending detailed information via DM now. ^AO";
+                        samplePrivate = "Thank you for reaching out to Sun King Solar support. We're here to assist you with your inquiry.\n\n" + 
+                                        "Based on your question, here's how we can help:\n\n" +
+                                        "If you need product information, we can provide details about our solar solutions.\n" +
+                                        "For technical issues, we'll guide you through troubleshooting steps.\n" +
+                                        "For payment questions, we can check your account status.\n\n" +
+                                        "Could you please provide more details so we can assist you better? ^AO";
+                    }
+                    
+                    // Update response areas
+                    publicResponse.textContent = samplePublic;
+                    privateResponse.textContent = samplePrivate;
+                    
+                    // Hide loading indicator
+                    loadingIndicator.style.display = 'none';
+                }, 1500);
+            });
+            
+            // Copy button functionality
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    const textToCopy = targetElement.textContent;
+                    
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        // Visual feedback
+                        const originalText = this.textContent;
+                        this.textContent = 'Copied!';
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                        }, 2000);
+                    });
+                });
+            });
+            
+            // Feedback buttons
+            feedbackButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.classList.contains('like')) {
+                        alert('Thank you for your feedback! We\'re glad the response was helpful.');
+                    } else {
+                        alert('Thank you for your feedback. We\'ll use this to improve our responses.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
